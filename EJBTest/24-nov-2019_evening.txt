@@ -1,0 +1,75 @@
+  934  cd /SoftDev/Java/Applications/Database/
+  935  ~/orclxe start
+  936  ~/glassfish5/bin/asadmin start-domain
+  937  . ~/glassfish5/setenv.sh 
+  938  cd DataSourceTest/WEB-INF/classes/
+  939  ~/glassfish5/bin/asadmin deploy ../../..
+  940  ~/glassfish5/bin/asadmin deploy ../../
+  941  vi ../../protected/order.jspx 
+  942  vi ~/.vimrc
+  943  vi ../../protected/order.jspx 
+  944  vi src/CustomerBean.java 
+  945  javac -d . src/CustomerBean.java 
+  946  touch ../../.reload
+  947  vi ../../protected/order.jspx 
+  948  vi src/CustomerBean.java 
+  949  javac -d . src/CustomerBean.java 
+  950  touch ../../.reload
+  951  cp ../../product.jspx ../../protected/invoice.jspx
+  952  vi ../../protected/invoice.jspx 
+  953  vi src/AuthenticationServlet.java 
+  954  javac -d . src/AuthenticationServlet.java 
+  955  touch ../../.reload
+  956  vi src/AuthorizationFilter.java 
+  957  javac -d . src/AuthorizationFilter.java 
+  958  touch ../../.reload
+  959  cd ../..
+  960  cd ..
+  961  mkdir JPATest
+  962  cd JPATest/
+  963  mkdir -p WEB-INF/classes/src
+  964  cd WEB-INF/classes/
+  965  mkdir META-INF
+  966  cp ~/Shared/Support/web/persistence.xml META-INF/
+  967  cp ~/Shared/Support/web/orm.xml META-INF/
+  968  vi META-INF/persistence.xml 
+  969  cd ../..
+  970  cp ../DataSourceTest/WEB-INF/web.xml WEB-INF/
+  971  vi WEB-INF/web.xml 
+  972  cp ~/Shared/web.xml WEB-INF/
+  973  vi WEB-INF/web.xml 
+  974  ~/glassfish5/bin/asadmin deploy .
+  975  cd WEB-INF/classes/
+  976  vi src/ProductEntity.java
+  977  javac -d . src/ProductEntity.java
+  978  vi META-INF/orm.xml 
+  979  vi src/ProductManagedBean.java
+  980  javac -d . src/ProductManagedBean.java
+  981  vi src/ProductManagedBean.java
+  982  javac -d . src/ProductManagedBean.java
+  983  vi ../../index.xhtml 
+  984  touch ../../.reload
+  985  vi ../../index.xhtml 
+  986  history >cmd-23-11-2019_evn.txt
+  987  vi cmd-23-11-2019_evn.txt 
+  988  cd ..
+  989  ll
+  990  pwd
+  991  cd Database/
+  992  ll
+  993  cp -r DataSourceTest/  ~/Shared/
+  994  exit
+  995  ~/glassfish5/bin/asadmin stop-domain
+  996  exit
+  997  ll\
+  998  cd /SoftDev/
+  999  ll
+ 1000  cd Java/
+ 1001  ll
+ 1002  cd Applications/
+ 1003  ll
+ 1004  cd Database/
+ 1005  ll
+ 1006  cd EJBTest/
+ 1007  ll
+ 1008  history > 24-nov-2019_evening.txt

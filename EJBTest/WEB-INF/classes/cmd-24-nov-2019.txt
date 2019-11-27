@@ -1,0 +1,58 @@
+    1  ~/orclxe start
+    2  ~/glassfish5/bin/asadmin start-domain
+    3  cd /SoftDev/Java/Applications/Database/JPATest/
+    4  vi index.xhtml 
+    5  . ~/glassfish5/setenv.sh 
+    6  cd WEB-INF/classes/
+    7  vi src/OrderEntity.java
+    8  javac -d . src/OrderEntity.java 
+    9  vi src/ProductEntity.java 
+   10  javac -d . src/ProductEntity.java 
+   11  vi META-INF/orm.xml 
+   12  touch ../../.reload
+   13  vi src/ProductManagedBean.java 
+   14  javac -d . src/ProductManagedBean.java 
+   15  touch ../../.reload
+   16  cp ../../index.xhtml ../../detail.xhtml
+   17  vi ../../detail.xhtml
+   18  touch ../../.reload
+   19  vi src/ProductEntity.java 
+   20  javac -d . src/ProductEntity.java 
+   21  vi src/ProductManagedBean.java 
+   22  javac -d . src/ProductManagedBean.java 
+   23  vi src/ProductManagedBean.java 
+   24  javac -d . src/ProductManagedBean.java 
+   25  touch ../../.reload
+   26  cp ../../detail.xhtml ../../edit.xhtml
+   27  vi ../../edit.xhtml 
+   28  vi ../../index.xhtml 
+   29  vi ../../edit.xhtml 
+   30  ip addr
+   31  q
+   32  cd ../..
+   33  cd ../
+   34  mkdir EJBTest
+   35  cd EJBTest/
+   36  mkdir -p WEB-INF/classes/META-INF
+   37  cd WEB-INF/
+   38  cp ../../../Web/JSPTest/WEB-INF/web.xml .
+   39  vi web.xml 
+   40  cp ../../JPATest/WEB-INF/classes/META-INF/persistence.xml classes/META-INF/
+   41  vi classes/META-INF/persistence.xml 
+   42  cd ../..
+   43  cd EJBTest/
+   44  ~/glassfish5/bin/asadmin deploy .
+   45  cd WEB-INF/classes/
+   46  mkdir src
+   47  vi src/OrderEntity.java
+   48  javac -d . src/OrderEntity.java
+   49  ll
+   50  javac -d . src/CounterEntity.java
+   51  vi src/CounterEntity.java
+   52  javac -d . src/CounterEntity.java
+   53  vi src/RestfulApp.java
+   54  javac -d . src/RestfulApp.java
+   55  vi src/OrderInput.java
+   56  vi src/OrderOutput.java
+   57  javac -d . src/*.java
+   58  history >cmd-24-nov-2019.txt

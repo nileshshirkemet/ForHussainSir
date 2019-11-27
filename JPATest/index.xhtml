@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+		<title>SalesWebApp</title>
+	</h:head>
+
+	<h:body>
+		<h1>List of Products</h1>
+		<h:form>
+			<h:dataTable border="1" value="#{productModel.products}" var="entry">
+				<h:column>
+					<f:facet name="header">Product No</f:facet>
+					<h:outputText value="#{entry.productNo}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Unit Price</f:facet>
+					<h:outputText value="#{entry.price}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Current Stock</f:facet>
+					<h:outputText value="#{entry.stock}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Actions</f:facet>
+					<h:commandLink value="Orders" action="#{productModel.showOrders(entry)}"/>,
+					<h:commandLink value="Edit" action="#{productModel.editProduct(entry)}"/>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</h:body>
+
+</html>
+

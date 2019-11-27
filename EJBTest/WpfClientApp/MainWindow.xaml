@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfClientApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClientApp"
+        mc:Ignorable="d"
+        Title="OrderManagerClient" Height="270" Width="300">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <StackPanel>
+        <TextBlock Margin="10" FontSize="16" Text="Welcome Customer"/>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="5" Text="Customer ID:"/>
+            <TextBox Margin="5" Grid.Column="1" Text="{Binding CustomerId}"/>
+            <TextBlock Margin="5" Grid.Row="1" Text="Product No:"/>
+            <TextBox Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding ProductNo}"/>
+            <TextBlock Margin="5" Grid.Row="2" Text="Quantity:"/>
+            <TextBox Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding Quantity}"/>
+        </Grid>
+        <Button Margin="10" HorizontalAlignment="Left" MinWidth="60" Content="Order" Command="{Binding Order}"/>
+        <TextBlock Margin="10" FontSize="12" Text="{Binding OrderMessage}"/>
+    </StackPanel>
+</Window>

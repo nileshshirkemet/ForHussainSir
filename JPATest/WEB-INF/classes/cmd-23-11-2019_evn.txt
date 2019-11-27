@@ -1,0 +1,52 @@
+  997  cd /SoftDev/Java/Applications/Database/
+  998  ~/orclxe start
+  999  ~/glassfish5/bin/asadmin start-domain
+ 1000  . ~/glassfish5/setenv.sh 
+ 1001  cd DataSourceTest/WEB-INF/classes/
+ 1002  ~/glassfish5/bin/asadmin deploy ../../..
+ 1003  ~/glassfish5/bin/asadmin deploy ../../
+ 1004  vi ../../protected/order.jspx 
+ 1005  vi ~/.vimrc
+ 1006  vi ../../protected/order.jspx 
+ 1007  vi src/CustomerBean.java 
+ 1008  javac -d . src/CustomerBean.java 
+ 1009  touch ../../.reload
+ 1010  vi ../../protected/order.jspx 
+ 1011  vi src/CustomerBean.java 
+ 1012  javac -d . src/CustomerBean.java 
+ 1013  touch ../../.reload
+ 1014  cp ../../product.jspx ../../protected/invoice.jspx
+ 1015  vi ../../protected/invoice.jspx 
+ 1016  vi src/AuthenticationServlet.java 
+ 1017  javac -d . src/AuthenticationServlet.java 
+ 1018  touch ../../.reload
+ 1019  vi src/AuthorizationFilter.java 
+ 1020  javac -d . src/AuthorizationFilter.java 
+ 1021  touch ../../.reload
+ 1022  cd ../..
+ 1023  cd ..
+ 1024  mkdir JPATest
+ 1025  cd JPATest/
+ 1026  mkdir -p WEB-INF/classes/src
+ 1027  cd WEB-INF/classes/
+ 1028  mkdir META-INF
+ 1029  cp ~/Shared/Support/web/persistence.xml META-INF/
+ 1030  cp ~/Shared/Support/web/orm.xml META-INF/
+ 1031  vi META-INF/persistence.xml 
+ 1032  cd ../..
+ 1033  cp ../DataSourceTest/WEB-INF/web.xml WEB-INF/
+ 1034  vi WEB-INF/web.xml 
+ 1035  cp ~/Shared/web.xml WEB-INF/
+ 1036  vi WEB-INF/web.xml 
+ 1037  ~/glassfish5/bin/asadmin deploy .
+ 1038  cd WEB-INF/classes/
+ 1039  vi src/ProductEntity.java
+ 1040  javac -d . src/ProductEntity.java
+ 1041  vi META-INF/orm.xml 
+ 1042  vi src/ProductManagedBean.java
+ 1043  javac -d . src/ProductManagedBean.java
+ 1044  vi src/ProductManagedBean.java
+ 1045  javac -d . src/ProductManagedBean.java
+ 1046  vi ../../index.xhtml 
+ 1047  touch ../../.reload
+ 1048  vi ../../index.xhtml 
