@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	<head>
+		<title>SalesWebApp</title>
+	</head>
+
+	<body>
+		<h1>Welcome Customer</h1>
+		<form method="post" action="login">
+			<p>
+				<b>Customer ID</b><br/>
+				<input type="text" name="customerId"/>
+			</p>
+			<p>
+				<b>Password</b><br/>
+				<input type="password" name="password"/>
+			</p>
+			<p>
+				<input type="submit" value="Login"/>
+			</p>
+		</form>
+		<p>
+			<c:if test="${param.failed}">
+				<i>Authentication Failed</i>
+			</c:if>
+		</p>
+	</body>
+
+</html>
+

@@ -1,0 +1,39 @@
+    1  cd /SoftDev/Java/Applications/Database/
+    2  ll
+    3  mkdir DataSourceTest
+    4  cd DataSourceTest/
+    5  mkdir WEB-INF/classes/src
+    6  mkdir -p WEB-INF/classes/src
+    7  cp ../../Web/JSPTest/WEB-INF/web.xml WEB-INF/
+    8  vi WEB-INF/web.xml 
+    9  ~/orclxe start
+   10  ~/glassfish5/bin/asadmin start-domain
+   11  . ~/glassfish5/setenv.sh 
+   12  ~/glassfish5/bin/asadmin deploy .
+   13  cd WEB-INF/classes/
+   14  vi src/ProductBean.java
+   15  javac -d . src/ProductBean.java
+   16  touch ../../.reload
+   17  vi ../../product.jspx
+   18  vi src/CustomerBean.java
+   19  javac -d . src/CustomerBean.java
+   20  vi src/AuthenticationServlet.java
+   21  javac -d . src/AuthenticationServlet.java
+   22  vi src/AuthenticationServlet.java
+   23  javac -d . src/AuthenticationServlet.java
+   24  vi src/AuthenticationServlet.java
+   25  javac -d . src/AuthenticationServlet.java
+   26  touch ../../.reload
+   27  cp ../../product.jspx ../../customer.jspx
+   28  vi ../../customer.jspx 
+   29  vi src/AuthorizationFilter.java
+   30  javac -d . src/AuthorizationFilter.java
+   31  vi src/AuthorizationFilter.java
+   32  javac -d . src/AuthorizationFilter.java
+   33  touch ../../.reload 
+   34  mkdir ../../protected
+   35  cp ../../customer.jspx ../../protected/order.jspx
+   36  vi ../../protected/order.jspx 
+   37  cd ../...
+   38  cd ../..
+   39  history >> cmd-23-11-2019.txt

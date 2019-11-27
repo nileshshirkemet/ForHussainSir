@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	<jsp:useBean id="product" class="sales.web.app.ProductBean" scope="application"/>
+
+	<head>
+		<title>SalesWebApp</title>
+	</head>
+
+	<body>
+		<h1>Our Products</h1>
+		<table border="1">
+			<tr>
+				<th>Product No</th>
+				<th>Unit Price</th>
+				<th>Current Stock</th>
+			</tr>
+			<c:forEach var="entry" items="${product.entries}">
+				<tr>
+					<td>${entry.productNo}</td>
+					<td>${entry.price}</td>
+					<td>${entry.stock}</td>
+				</tr>
+			</c:forEach>
+		</table>
+		<p>
+			<a href="customer.jspx">Customer Log In</a>
+		</p>
+	</body>
+
+</html>
